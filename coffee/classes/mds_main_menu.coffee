@@ -198,6 +198,15 @@ module.exports = class MdsMainMenu
                       w?.mdsWindow, { ignoreRecent: true }
                     )
                 }
+                { type: 'separator' }
+                {
+                  label: '&Mono theme',
+                  click: (item, w) ->
+                    MdsWindow.loadFromFile(
+                      path.join(__dirname, '../../examples/mono.md'),
+                      w?.mdsWindow, { ignoreRecent: true }
+                    )
+                }
               ]
             }
           ]
@@ -265,6 +274,13 @@ module.exports = class MdsMainMenu
               type: if @window? then 'radio' else 'normal'
               checked: @states.theme == 'gaia'
               click: => @window.mdsWindow.send 'setTheme', 'gaia' unless @window.mdsWindow.freeze
+            }
+            {
+              label: '&Mono'
+              enabled: @window?
+              type: if @window? then 'radio' else 'normal'
+              checked: @states.theme == 'mono'
+              click: => @window.mdsWindow.send 'setTheme', 'mono' unless @window.mdsWindow.freeze
             }
           ]
 
