@@ -18,6 +18,19 @@ This is some long text. This is some long text. This is some long text. This is 
 
 ---
 
+<!-- *footer: MIT License (C)2017 MacRat<m@crat.jp> -->
+
+# Footer Support
+
+---
+
+<!-- page_number: true -->
+
+### And,
+# Page Number Support
+
+---
+
 ###  Unordered
 # Listing
 
