@@ -24,7 +24,7 @@ This is some long text. This is some long text. This is some long text. This is 
 
 ---
 
-<!-- page_number: true -->
+<!-- *page_number: true -->
 
 ### And,
 # Page Number Support
