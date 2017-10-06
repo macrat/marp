@@ -207,6 +207,15 @@ module.exports = class MdsMainMenu
                       w?.mdsWindow, { ignoreRecent: true }
                     )
                 }
+                { type: 'separator' }
+                {
+                  label: '&Ruu theme',
+                  click: (item, w) ->
+                    MdsWindow.loadFromFile(
+                      path.join(__dirname, '../../examples/ruu.md'),
+                      w?.mdsWindow, { ignoreRecent: true }
+                    )
+                }
               ]
             }
           ]
@@ -281,6 +290,13 @@ module.exports = class MdsMainMenu
               type: if @window? then 'radio' else 'normal'
               checked: @states.theme == 'mono'
               click: => @window.mdsWindow.send 'setTheme', 'mono' unless @window.mdsWindow.freeze
+            }
+            {
+              label: '&Ruu'
+              enabled: @window?
+              type: if @window? then 'radio' else 'normal'
+              checked: @states.theme == 'ruu'
+              click: => @window.mdsWindow.send 'setTheme', 'ruu' unless @window.mdsWindow.freeze
             }
           ]
 

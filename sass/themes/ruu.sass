@@ -1,0 +1,99 @@
+@import '../../node_modules/github-markdown-css/github-markdown'
+@import '../../node_modules/highlight.js/styles/github'
+@import './markdown'
+
+$accent: #df7a7a
+$primary: #333
+$light: #aaa
+$bglight: #ddd
+$bg: #ccc
+
+
++body-slide-mode
+  font-size: 91.25%
+
+  .slide_wrapper > .slide
+    padding: 0 78.5px
+    justify-content: center
+    background-color: $bg
+    color: $primary
+
+  .slide_page
+    font-size: 24px
+
+  .slide_wrapper:not([data-template~="invert"]) .slide_bg:after
+    content: ""
+    height: 0.75em
+    width: 100%
+    background-color: $primary
+    box-shadow: 0 1px 2px black
+
+  .slide_wrapper .slide .slide_footer
+    font-size: 18px
+    background-color: $primary
+    color: $light
+    position: absolute
+    left: 0
+    bottom: 0
+    padding: .1em .8em
+    width: 100%
+    text-align: right
+    line-height: 1
+    min-height: 1em
+    height: auto
+    box-shadow: 0 -1px 2px black
+
+  .markdown-body
+    font-size: 29px
+
+    strong
+      color: $accent
+
+    h1
+      font-size: 1.6em
+      color: $primary
+      border-bottom: 4px solid $accent
+    h2
+      font-size: 1.6em
+      color: $primary
+      border-bottom: 4px solid $light
+    h3
+      font-size: 1.3em
+      color: $primary
+      border-bottom: 2px solid $accent
+    h4
+      font-size: 1.3em
+      color: $primary
+      border-bottom: 2px solid $light
+    h5
+      font-size: 1.1em
+      color: $accent
+    h6
+      font-size: 1.1em
+      color: $primary
+
+    pre
+      background-color: $bglight
+      line-height: 1.15
+      border-radius: 0
+      box-shadow: 2px 2px 2px black
+
+    blockquote
+      background-color: $bglight
+      padding: .5em 1em
+      border: none
+      box-shadow: 2px 2px 2px black
+
+  .slide_wrapper[data-template~="invert"]
+    > .slide
+      color: $light
+      background-color: $primary
+
+    .slide_footer
+      box-shadow: none
+
+    h1, h2, h3, h4, h6
+      color: $light
+
+    pre, blockquote
+      background-color: $bg
